@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header">
             <h1 id="announcer">Rock Paper Scissors</h1>
-            <h3 id="details">First to five wins</h3>
+            <h3 id="details">First to five points wins</h3>
         </div>
         <div class="game">
             <div class="player1">
@@ -33,9 +33,16 @@
             <button onclick="rps(1)">rock</button>
             <button onclick="rps(2)">paper</button>
             <button onclick="rps(3)">scissors</button>
+            <!-- <button onclick="reset()">Reset</button> -->
         </div>
         <div class="footer">
             <h4>Copyright © 2024 MiaZakiee</h4>
+        </div>
+
+        <div class="gameover" id="gameover">
+            <!-- Game over or You win -->
+            <h1>Game over</h1>
+            <button onclick="reset()">Reset</button>
         </div>
     </div>
 </body>

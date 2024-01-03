@@ -37,7 +37,7 @@ let rps = async function (action) {
     changeImage(action,op);
 
     let outcome = "";
-    let reason = "";
+    let reason = " ";
     switch (action) {
         case 1:
             if (op == 1) {
@@ -88,8 +88,11 @@ let rps = async function (action) {
     document.getElementById('details').textContent = reason;
 
     if (p1Score == 5 || p2Score == 5) {
+        await sleep (250);
         if (p1Score == 5) {
-            alert()
+            alert("You win");
+        } else {
+            alert("Computer wins!");
         }
     }
 
@@ -100,10 +103,5 @@ let rps = async function (action) {
 }
 
 let reset = function () {
-    p1Score = 0;
-    p2Score = 0;
-    document.getElementById('score1').textContent = "You: " + p1Score;
-    document.getElementById('score2').textContent = "Computer: " + p2Score;
-    document.getElementById('announcer').textContent = "Rock Paper Scissors";
-    document.getElementById('details').textContent = "First to five wins";
+    location.reload();
 }
