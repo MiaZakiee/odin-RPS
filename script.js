@@ -87,12 +87,14 @@ let rps = async function (action) {
     document.getElementById('announcer').textContent = outcome;
     document.getElementById('details').textContent = reason;
 
+    let gameover = document.getElementById("gameover");
     if (p1Score == 5 || p2Score == 5) {
-        await sleep (250);
+        // await sleep (250);  
+        gameover.style.display = "block";
         if (p1Score == 5) {
-            alert("You win");
+            // alert("You win");
         } else {
-            alert("Computer wins!");
+            // alert("Computer wins!");
         }
     }
 
