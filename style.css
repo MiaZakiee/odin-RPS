@@ -1,7 +1,11 @@
-body {
+* {
     margin: 0;
-    padding: 0;;
+    padding: 0;
+}
+
+body {
     background-color: #FFA343;
+    height: auto;
 }
 
 .container {
@@ -16,43 +20,72 @@ body {
     flex-direction: column;
     justify-content:left;
     align-items: center;
-    height: 100px;
+    width: 100%;
 }
 
 .title,
 .footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    /* height: 80px; */
 }
 
 .footer {
     height: auto;
-    padding-top: 10px;
+}
+
+.player1,
+.player2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .game {
+    width: 100%;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 200px;
 }
 
 .score {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    /* bottom: 50px; */
 }
 
 .buttons {
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
-button {
+.img {
+    max-width: 50px;
+    padding: 15px;
+    background-color: #E7E0D3;
+    border-radius: 20%;
+    border: solid black 1px;
+}
+
+.img:hover {
+    background-color: #FFA343;
+}
+
+#scissors {
     height: 50px;
-    width: 100px;
 }
 
 .gameover {
