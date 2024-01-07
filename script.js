@@ -88,13 +88,14 @@ let rps = async function (action) {
     document.getElementById('details').textContent = reason;
 
     let gameover = document.getElementById("gameover");
+    let message = document.getElementById("gameoverMessage");
     if (p1Score == 5 || p2Score == 5) {
         // await sleep (250);  
         gameover.style.display = "block";
         if (p1Score == 5) {
-            // alert("You win");
+            message.textContent = "Congratulations You win!"
         } else {
-            // alert("Computer wins!");
+            message.textContent = "Game over You lost ://"
         }
     }
 
